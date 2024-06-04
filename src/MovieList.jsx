@@ -7,7 +7,7 @@ export function MoviesList() {
         {movies.map((movie, index) => {
           return (
             <div
-              className="flex flex-row box-border justify-center gap-4 p-[1rem] w-[23rem] h-fit rounded-lg bg-white shadow-xl"
+              className="flex flex-row box-border justify-start gap-8 p-[2rem] w-[30rem] h-fit rounded-lg bg-white shadow-xl"
               key={index}
             >
               <img
@@ -15,7 +15,7 @@ export function MoviesList() {
                 alt="movie-image"
                 className="w-[5rem] h-[5rem] rounded-[8px]"
               />
-              <div className="flex flex-col text-left w-1/2 box-border">
+              <div className="flex flex-col text-left w-2/3 box-border">
                 <div className="text-black" key={index}>
                   Title: {movie.title}
                 </div>
@@ -28,11 +28,11 @@ export function MoviesList() {
                 <div className="text-black" key={index}>
                   Director: {movie.director}
                 </div>
-                {/* <div className='' key={index}> {movie.genres.map((genre,index)=>{
+                <div className='flex flex-row gap-2 text-black items-center' key={index}>Genres: {movie.genres.map((genre,index)=>{
                                 return (
-                                <div className='' key={index}>Genres: {genre[index]} </div>
+                                <div id='Genre' className='text-black p-1 rounded-lg' key={index}>{genre} </div>
                                 )
-                            })}</div> */}
+                            })}</div>
                 <div className="text-black" key={index}>
                   imDB Rating: {movie.imdbRating}
                 </div>
